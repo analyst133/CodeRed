@@ -37,6 +37,80 @@ https://mattw.io/youtube-metadata/   (Submit the youtube video title link in the
 You can use other video search engines such as Google videos (https://www.google.com/videohp), Yahoo videos (https://in.video.search.yahoo.com), etc.; video analysis tools such as EZGif (https://ezgif.com), VideoReverser.com (https://www.videoreverser.com) etc.; and reverse image search tools such as TinEye Reverse Image Search (https://tineye.com), Yahoo Image Search (https://images.search.yahoo.com), etc. to gather crucial information about the target organization.
 
 Answer 2: V_i3wCtn0qA
+---------
+Task 3: Gather Information from FTP Search Engines
+
+Here, we will use the NAPALM https://www.searchftps.net/ FTP indexer FTP search engine to extract critical FTP information about the target organization.
+You can also use FTP search engines such as FreewareWeb FTP File Search (https://www.freewareweb.com) to gather crucial FTP information about the target organization.
+Answer 3: YES
+-------
+Task 4: Gather Information from IoT Search Engines
+
+https://www.shodan.io/
+You can also use Censys (https://censys.io), which is an IoT search engine, to gather information such as manufacturer details, geographical location, IP address, hostname, open ports, etc.
+
+Answer 4: YES
+
+---------------
+Lab 2: Perform Footprinting Through Web Services
+
+Task 1: Find the Company’s Domains and Sub-domains using Netcraft
+
+https://www.netcraft.com ---> Resources -> Tools -> Site Report.
+After entering target website click on the link under Domain section to view subdomains.
+You can also use tools such as Sublist3r (https://github.com), Pentest-Tools Find Subdomains (https://pentest-tools.com), etc. to identify the domains and sub-domains of any target website.
+
+Answer 5: Linux
+---------
+Task 2: Gather Personal Information using PeekYou Online People Search Service
+
+https://www.peekyou.com ---? first name, last name and location.
+
+You can also use Spokeo (https://www.spokeo.com), pipl (https://pipl.com), Intelius (https://www.intelius.com), BeenVerified (https://www.beenverified.com), etc., people search services to gather personal information of key employees in the target organization.
+
+Answer 6: University of Chicago
+--------
+Task 3: Gather an Email List using theHarvester
+
+theHarvester: This tool gathers emails, subdomains, hosts, employee names, open ports, and banners from different public sources such as search engines, PGP key servers, and the SHODAN computer database as well as uses Google, Bing, SHODAN, etc. to extract valuable information from the target domain. This tool is intended to help ethical hackers and pen testers in the early stages of the security assessment to understand the organization’s footprint on the Internet. It is also useful for anyone who wants to know what organizational information is visible to an attacker.
+
+Got to parrot os and be in root directory by doing SU stuff.
+In the terminal window, type theHarvester -d microsoft.com -l 200 -b baidu and press Enter.
+In this command, -d specifies the domain or company name to search, -l specifies the number of results to be retrieved, and -b specifies the data source.
+
+You can specify different data sources (e.g., Baidu, bing, binaryedge, bingapi, censys, google, linkedin, twitter, virustotal, threatcrowd, crtsh, netcraft, yahoo, etc.) to gather information about the target.
+
+Answer 7: -d
+---------
+Task 4: Gather Information using Deep and Dark Web Searching
+Tor Browswer with default Duck Duck Go search engine
+https://www.spywizards.com
+The Hidden Wiki is an onion site that works as a Wikipedia service of hidden websites. (http://zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion/wiki)
+
+FakeID is an onion site for creating fake passports (http://ymvhtqya23wqpez63gyc3ke4svju3mqsby2awnhd3bk2e65izt7baqad.onion)
+
+Cardshop is an onion site that sells cards with good balances (http://s57divisqlcjtsyutxjz2ww77vlbwpxgodtijcsrgsuts4js5hnxkhqd.onion)
+You can also use tools such as ExoneraTor (https://metrics.torproject.org), OnionLand Search engine (https://onionlandsearchengine.com), etc. to perform deep and dark web browsing.
+
+Answer 8: DuckDuckGo
+--------
+Task 5: Determine Target OS Through Passive Footprinting
+https://search.censys.io/?q= 
+You can also use webservices such as Netcraft (https://www.netcraft.com), Shodan (https://www.shodan.io), etc. to gather OS information of target organization through passive footprinting
+---------------------------------------------
+Lab 3: Perform Footprinting Through Social Networking Sites
+---------------------------------------------
+Task 1: Gather Employees’ Information from LinkedIn using theHarvester
+Use theHarvester
+Answer 9: -b
+---------
+Task 2: Gather Personal Information from Various Social Networking Sites using Sherlock
+Type sherlock "satya nadella" and press Enter or any name
+You can also use tools such as Social Searcher (https://www.social-searcher.com), UserRecon (https://github.com), etc. to gather additional information related to the target company and its employees from social networking sites.
+----------------------------------------------
+Lab 4: Perform Website Footprinting
+----------------------------------------------
+
 
 
 
