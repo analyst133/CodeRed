@@ -1,3 +1,5 @@
+Lab 1: Perform Footprinting Through Search Engines
+-------------------------------------------------
 Task 1: Gather Information using Advanced Google Hacking Techniques:
 
 goto: google.com
