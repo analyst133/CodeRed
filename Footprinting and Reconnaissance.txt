@@ -30,4 +30,7 @@ Answer 1 : https://www.eccouncil.org/wp-content/uploads/2023/09/CEH-brochure.pdf
 
 Task 2: Gather Information from Video Search Engines
 
+https://mattw.io/youtube-metadata/   (Submit the youtube video title link in the field)
+
+
 
