@@ -1,0 +1,79 @@
+_____
+
+Find Domain Controller FQDN • Use nmap scan: nmap -p 389,88,3268 -sV 192.168.0.0/24 • Look for machine running LDAP or Kerberos service. • After that, use nslookup IP to find full domain name.
+
+⸻
+
+2. Find IP of WampServer • Scan with: nmap -p 80,443 -sV 192.168.0.0/24 • Look for server running Apache on Windows (this is WampServer). • You can open browser and check IP if needed.
+
+⸻
+
+3. Crack SMB Henry Password and Decrypt sniff.txt • Scan for SMB service: nmap -p 445 —script smb-os-discovery 192.168.0.0/24 • Use hydra to crack password: • hydra -l henry -P /usr/share/wordlists/rockyou.txt smb://IP • Connect to SMB and get Sniff.txt. • Use Henry’s password to decode (maybe base64, xor, etc).
+
+⸻
+
+4. Find ELF with highest entropy • Find device with nmap -A 192.168.0.0/24 • Connect and find folder “Scan”. • Check files using ent command. • File with highest entropy, run sha384sum filename. • Take last 4 numbers from hash.
+
+⸻
+
+5. Vulnerability Scan 172.20.0.16 • Scan host with nmap -sV —script vuln 172.20.0.16 • Find if any PHP or web tool is End of Life. • Check its severity score (CVSS score).
+
+⸻
+
+6. Exploit Remote Login, find NetworkPass.txt • Scan for SSH, Telnet open. • Try simple passwords or weak login. • Access, then cat NetworkPass.txt to see content.
+
+⸻
+
+7. Find hidden data in MyTrip.jpg • Use steghide extract -sf MyTrip.jpg • Or try strings MyTrip.jpg • Find 8 letter/number secret. (Use password “Imagination” if asked.)
+
+⸻
+
+8. FTP Weak Login • Scan FTP server with nmap -p 21 192.168.0.0/24 • Crack login with hydra (anonymous or weak password). • Download Credential.txt file.
+
+⸻
+
+9. Ubuntu Privilege Escalation • Login SSH with username/password (smith/L1nux123). • Use sudo -l to see what you can run. • Try to become root and read /root/imroot.txt.
+
+⸻
+
+10. Find Entry Point of die-another-day.exe • Open file with PE tools like PE-bear. • Or use Linux command: rabin2 -e die-another-day.exe • Find entry address.
+
+⸻
+
+11. Find Top Attacker IP • Open PCAP file in Wireshark. • Go to Statistics > Conversations. • Find IP that sends most packets.
+
+⸻
+
+12. SQL Injection to Find Sarah Password • Login website cinema.cehorg.com with Karen/computer. • Try SQLi on website fields or URL. • Dump database and find Sarah’s password.
+
+⸻
+
+13. Find Flag on cehorg.com page_id=84 • Try LFI/RFI tricks or SQLi. • Also check HTML source for hidden flag.
+
+⸻
+
+14. Hack training.cehorg.com to Find Flag • Find vulnerability (like file upload, RCE). • Get shell access and find Flag.txt file.
+
+⸻
+
+15. SQL Injection on cybersec.cehorg.com • Do SQL Injection to dump table with “Flag” column. • Get the flag value and submit.
+
+⸻
+
+16. Crack MD5 Hash in DVWA • Download file Hash.txt from DVWA upload. • Crack it using hashcat or online cracker. • Submit cracked password.
+
+⸻
+
+17. Find IoT Publish Message Length • Open pcapng file in Wireshark. • Filter: mqtt • Find PUBLISH packet and see message size.
+
+⸻
+
+18. Crack WiFi Password from Capture • Use aircrack-ng WirelessCapture.cap -w rockyou.txt • Find Wi-Fi password.
+
+⸻
+
+19. Access Machine with RAT and Get sa_code.txt • Find RAT installed (VNC/RDP/SCP). • Connect and download sa_code.txt.
+
+⸻
+
+20. Crack VeraCrypt Password and Get Confidential.txt • Crack password hash from Key2Secret.txt using hashcat. • Open VeraCrypt file with cracked password. • Read file Confidential.txt inside.
